@@ -1,0 +1,47 @@
+{
+  "name": "parcel-starter-kit",
+  "author": "Carlos Barbosa @socarlosb",
+  "version": "1.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "keywords": [
+    "parceljs",
+    "es6",
+    "eslint",
+    "jest",
+    "babel"
+  ],
+  "scripts": {
+    "clean-dist": "rimraf dist",
+    "clean-coverage": "rimraf scr/tests-reports",
+    "start": "parcel src/index.html",
+    "lint": "eslint src/scripts/*",
+    "build": "parcel build src/index.html --public-url ./ --out-dir dist/output",
+    "dist": "npm run clean-dist && npm run build",
+    "test": "jest --watch",
+    "test-report": "npm run clean-coverage && jest --coverage"
+  },
+  "dependencies": {
+    "autoprefixer": "^7.2.4",
+    "babel-preset-env": "^1.6.1",
+    "node-sass": "^4.7.2",
+    "postcss-modules": "^1.1.0",
+    "posthtml-img-autosize": "^0.1.1",
+    "rimraf": "^2.6.2",
+    "typescript": "^2.7.1"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.5.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "jest": "^22.2.2",
+    "babel-jest": "^22.2.2"
+  },
+  "jest": {
+    "coverageDirectory": "src/tests-reports",
+    "coverageReporters": [
+      "html",
+      "text"
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+$browserContext: 16;
+$baseWidth: 2489;
+$baseHeight: 1400;
+
+$color-yellow: #f5d515;
+$color-red: #e7371d;
+$color-black: #1b1b1b;
+$font-family: 'Montserrat', sans-serif;
+
+@function em($pixels, $context: $browserContext) {
+  @return #{$pixels/$context}em;
+}
+
+@function vh($target) {
+  $vh-context: ($baseHeight*.01);
+  @return #{$target/$vh-context}vh;
+}
+
+@function vw($target) {
+  $vw-context: ($baseWidth*.01);
+  @return #{$target/$vw-context}vw;
+}

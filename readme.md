@@ -1,3 +1,3 @@
 Project 'CCO-Brand'
-Technologies: Gulp, JS, SCSS
+Technologies: Parcel, JS, SCSS, WickedCSS, PostCss, PostHtml
 Design license in directory
